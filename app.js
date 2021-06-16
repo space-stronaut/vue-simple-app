@@ -1,5 +1,5 @@
 const app = Vue.createApp({})
-app.component('todo', {
+app.component('Todo', {
   data() {
     return {
       todos: [],
