@@ -14,14 +14,16 @@ app.component('todo', {
       }
   },
   template: `
-  <form v-on:submit="handleSubmit">
-    <input v-model="value"/>
-    <button type="submit">Submit</button>
+  <form v-on:submit="handleSubmit" class="d-flex mt-5">
+    <input v-model="value" placeholder="Masukkan Kegiatan" class="form-control"/>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
     
-  <ul v-for="todo in todos">
-    <li>{{todo}}</li>
-  </ul>
+  <div v-for="todo in todos" class="mb-2 mt-3">
+    <div class="alert alert-primary" role="alert">
+        {{todo}}
+    </div>
+  </div>
   `
 })
 app.mount('#root')
